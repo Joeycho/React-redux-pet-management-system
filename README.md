@@ -29,12 +29,6 @@ Migrate the database which is described in `db/migrate` folder.
 
 Seed some datas into sqlite3. In this example, I put 2 clinics and 1 owner.
 
-`rails server`
-
-This command is for running the backend server on port number 3000.
-It will show the URL address to access. Make sure that it contains `http` protocol.
-It should be `http`, not `https`. In my example, it was `http://0.0.0.0:3000`.
-
 `npm start` under `/react-redux-pet-management-system` folder.
 
 This will run Frontend React-redux app and Rails api app.
