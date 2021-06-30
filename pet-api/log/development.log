@@ -7340,3 +7340,851 @@ Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.2ms | Allocations: 153
 Completed 200 OK in 125ms (Views: 99.9ms | ActiveRecord: 24.8ms | Allocations: 8486)
 
 
+Started GET "/owners" for ::1 at 2021-06-27 18:00:38 +0200
+  [1m[35m (45.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/owners" for ::1 at 2021-06-27 18:00:54 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 35975ms (Views: 29503.2ms | ActiveRecord: 2.6ms | Allocations: 5897)
+
+
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 37501ms (Views: 1850.1ms | ActiveRecord: 27674.9ms | Allocations: 9496)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:06:15 +0200
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 162ms (Views: 53.8ms | ActiveRecord: 13.9ms | Allocations: 7670)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-06-27 18:06:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/owners" for ::1 at 2021-06-27 18:21:15 +0200
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/owners" for ::1 at 2021-06-27 18:21:16 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (6.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 201ms (Views: 51.8ms | ActiveRecord: 8.6ms | Allocations: 8330)
+
+
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 1.8ms | Allocations: 5303)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:21:19 +0200
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 810)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-06-27 18:21:21 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/owners" for ::1 at 2021-06-27 18:21:40 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.3ms | Allocations: 954)
+
+
+Started DELETE "/owners/9" for ::1 at 2021-06-27 18:22:01 +0200
+Processing by OwnersController#destroy as */*
+  Parameters: {"id"=>"9", "owner"=>{}}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mOwner Destroy (22.2ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 23.5ms | Allocations: 4753)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+app/controllers/owners_controller.rb:24:in `destroy'
+Started GET "/owners" for ::1 at 2021-06-27 18:22:06 +0200
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.3ms | Allocations: 792)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:22:20 +0200
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 791)
+
+
+Started POST "/owners" for ::1 at 2021-06-27 18:22:50 +0200
+Processing by OwnersController#create as */*
+  Parameters: {"name"=>"jessica", "email"=>"jessica@flatironschool.com", "uid"=>nil, "owner"=>{"uid"=>nil, "name"=>"jessica", "email"=>"jessica@flatironschool.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+  [1m[36mOwner Create (24.8ms)[0m  [1m[32mINSERT INTO "owners" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "jessica"], ["email", "jessica@flatironschool.com"], ["created_at", "2021-06-27 16:22:50.214911"], ["updated_at", "2021-06-27 16:22:50.214911"]]
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (53.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owners/24
+Completed 302 Found in 110ms (ActiveRecord: 78.7ms | Allocations: 4200)
+
+
+Started GET "/owners/24" for ::1 at 2021-06-27 18:22:50 +0200
+Processing by OwnersController#show as */*
+  Parameters: {"id"=>"24", "owner"=>{}}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 608)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:22:58 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 876)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:23:10 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (14.8ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 87ms (Views: 39.7ms | ActiveRecord: 16.6ms | Allocations: 4628)
+
+
+Started DELETE "/clinics/0" for ::1 at 2021-06-27 18:23:17 +0200
+Processing by ClinicsController#destroy as */*
+  Parameters: {"id"=>"0", "clinic"=>{}}
+  [1m[36mClinic Load (0.9ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/clinics_controller.rb:25:in `set_clinic'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mClinic Destroy (7.2ms)[0m  [1m[31mDELETE FROM "clinics" WHERE "clinics"."id" = ?[0m  [["id", 0]]
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 8.6ms | Allocations: 3376)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+app/controllers/clinics_controller.rb:19:in `destroy'
+Started GET "/clinics" for ::1 at 2021-06-27 18:23:24 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.4ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Started GET "/owners" for ::1 at 2021-06-27 18:23:24 +0200
+Started GET "/pets" for ::1 at 2021-06-27 18:23:24 +0200
+Completed 200 OK in 28ms (Views: 19.1ms | ActiveRecord: 0.4ms | Allocations: 1422)
+
+
+Processing by PetsController#index as */*
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.4ms | Allocations: 2319)
+
+
+  [1m[36mClinic Load (0.5ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mCACHE Owner Load (0.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 516ms (Views: 469.2ms | ActiveRecord: 4.5ms | Allocations: 12684)
+
+
+Started DELETE "/pets/17" for ::1 at 2021-06-27 18:23:50 +0200
+Processing by PetsController#destroy as */*
+  Parameters: {"id"=>"17", "pet"=>{}}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:31:in `set_pet'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+  [1m[36mPet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (62.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+Completed 204 No Content in 101ms (ActiveRecord: 64.2ms | Allocations: 3972)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:23:53 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 876)
+
+
+Started DELETE "/owners/9" for ::1 at 2021-06-27 18:23:58 +0200
+Processing by OwnersController#destroy as */*
+  Parameters: {"id"=>"9", "owner"=>{}}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mOwner Destroy (0.5ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (36.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+Completed 204 No Content in 62ms (ActiveRecord: 38.1ms | Allocations: 2430)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:24:03 +0200
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.4ms | Allocations: 788)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:24:19 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.4ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.4ms | Allocations: 1055)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:24:19 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 790)
+
+
+Started GET "/pets" for ::1 at 2021-06-27 18:24:19 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.7ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mCACHE Owner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 326ms (Views: 323.9ms | ActiveRecord: 1.7ms | Allocations: 3901)
+
+
+Started DELETE "/pets/13" for ::1 at 2021-06-27 18:24:34 +0200
+Processing by PetsController#destroy as */*
+  Parameters: {"id"=>"13", "pet"=>{}}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:31:in `set_pet'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+  [1m[36mPet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (220.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+Completed 204 No Content in 252ms (ActiveRecord: 221.5ms | Allocations: 4232)
+
+
+Started DELETE "/pets/2" for ::1 at 2021-06-27 18:24:35 +0200
+Processing by PetsController#destroy as */*
+  Parameters: {"id"=>"2", "pet"=>{}}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:31:in `set_pet'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+  [1m[36mPet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (232.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:25:in `destroy'
+Completed 204 No Content in 291ms (ActiveRecord: 234.1ms | Allocations: 3965)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:24:37 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 790)
+
+
+Started DELETE "/owners/5" for ::1 at 2021-06-27 18:24:38 +0200
+Processing by OwnersController#destroy as */*
+  Parameters: {"id"=>"5", "owner"=>{}}
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mOwner Destroy (1.2ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (267.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+Completed 204 No Content in 323ms (ActiveRecord: 268.8ms | Allocations: 3966)
+
+
+Started DELETE "/owners/24" for ::1 at 2021-06-27 18:24:39 +0200
+Processing by OwnersController#destroy as */*
+  Parameters: {"id"=>"24", "owner"=>{}}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mOwner Destroy (0.6ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (319.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+Completed 204 No Content in 347ms (ActiveRecord: 320.3ms | Allocations: 3299)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:24:41 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.6ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 842)
+
+
+Started DELETE "/clinics/0" for ::1 at 2021-06-27 18:24:42 +0200
+Processing by ClinicsController#destroy as */*
+  Parameters: {"id"=>"0", "clinic"=>{}}
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/clinics_controller.rb:25:in `set_clinic'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mClinic Destroy (2.0ms)[0m  [1m[31mDELETE FROM "clinics" WHERE "clinics"."id" = ?[0m  [["id", 0]]
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (623.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+Completed 204 No Content in 674ms (ActiveRecord: 625.8ms | Allocations: 4229)
+
+
+Started DELETE "/clinics/3" for ::1 at 2021-06-27 18:24:43 +0200
+Processing by ClinicsController#destroy as */*
+  Parameters: {"id"=>"3", "clinic"=>{}}
+  [1m[36mClinic Load (0.6ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/clinics_controller.rb:25:in `set_clinic'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mClinic Destroy (0.5ms)[0m  [1m[31mDELETE FROM "clinics" WHERE "clinics"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (233.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+Completed 204 No Content in 298ms (ActiveRecord: 234.6ms | Allocations: 3454)
+
+
+Started DELETE "/clinics/4" for ::1 at 2021-06-27 18:24:44 +0200
+Processing by ClinicsController#destroy as */*
+  Parameters: {"id"=>"4", "clinic"=>{}}
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/clinics_controller.rb:25:in `set_clinic'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mClinic Destroy (0.8ms)[0m  [1m[31mDELETE FROM "clinics" WHERE "clinics"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (266.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+Completed 204 No Content in 304ms (ActiveRecord: 267.4ms | Allocations: 3298)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:24:46 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 625)
+
+
+Started GET "/pets" for ::1 at 2021-06-27 18:24:47 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 625)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:24:48 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 625)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:24:48 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 625)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:24:51 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 625)
+
+
+Started POST "/owners" for ::1 at 2021-06-27 18:25:09 +0200
+Processing by OwnersController#create as */*
+  Parameters: {"name"=>"Joey", "email"=>"joey@flatironschool", "uid"=>nil, "owner"=>{"uid"=>nil, "name"=>"Joey", "email"=>"joey@flatironschool"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+  [1m[36mOwner Create (0.7ms)[0m  [1m[32mINSERT INTO "owners" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joey"], ["email", "joey@flatironschool"], ["created_at", "2021-06-27 16:25:09.889114"], ["updated_at", "2021-06-27 16:25:09.889114"]]
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (53.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owners/25
+Completed 302 Found in 81ms (ActiveRecord: 54.2ms | Allocations: 3929)
+
+
+Started GET "/owners/25" for ::1 at 2021-06-27 18:25:09 +0200
+Processing by OwnersController#show as */*
+  Parameters: {"id"=>"25", "owner"=>{}}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 574)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:25:12 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 625)
+
+
+Started POST "/clinics" for ::1 at 2021-06-27 18:25:23 +0200
+Processing by ClinicsController#create as */*
+  Parameters: {"name"=>"Sherock", "addr"=>"Baker Street", "id"=>nil, "clinic"=>{"id"=>nil, "name"=>"Sherock", "addr"=>"Baker Street"}}
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clinics_controller.rb:15:in `create'
+  [1m[36mClinic Create (0.8ms)[0m  [1m[32mINSERT INTO "clinics" ("name", "addr", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sherock"], ["addr", "Baker Street"], ["created_at", "2021-06-27 16:25:23.441686"], ["updated_at", "2021-06-27 16:25:23.441686"]]
+  ↳ app/controllers/clinics_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (540.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clinics_controller.rb:15:in `create'
+Redirected to http://localhost:3000/clinics/52
+Completed 302 Found in 554ms (ActiveRecord: 541.3ms | Allocations: 3650)
+
+
+Started GET "/clinics/52" for ::1 at 2021-06-27 18:25:24 +0200
+Processing by ClinicsController#show as */*
+  Parameters: {"id"=>"52", "clinic"=>{}}
+  [1m[36mClinic Load (0.4ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/clinics_controller.rb:25:in `set_clinic'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 595)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:25:30 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 697)
+
+
+Started GET "/pets" for ::1 at 2021-06-27 18:25:30 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 1020)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:25:30 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 704)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:25:35 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 704)
+
+
+Started POST "/owners" for ::1 at 2021-06-27 18:25:42 +0200
+Processing by OwnersController#create as */*
+  Parameters: {"name"=>"Jessica", "email"=>"jessica@flatironschool.com", "uid"=>nil, "owner"=>{"uid"=>nil, "name"=>"Jessica", "email"=>"jessica@flatironschool.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+  [1m[36mOwner Create (0.8ms)[0m  [1m[32mINSERT INTO "owners" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jessica"], ["email", "jessica@flatironschool.com"], ["created_at", "2021-06-27 16:25:42.941173"], ["updated_at", "2021-06-27 16:25:42.941173"]]
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (181.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owners/26
+Completed 302 Found in 199ms (ActiveRecord: 182.8ms | Allocations: 3385)
+
+
+Started GET "/owners/26" for ::1 at 2021-06-27 18:25:43 +0200
+Processing by OwnersController#show as */*
+  Parameters: {"id"=>"26", "owner"=>{}}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 575)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:25:44 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 784)
+
+
+Started GET "/pets" for ::1 at 2021-06-27 18:25:45 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 625)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:25:45 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.4ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 697)
+
+
+Started POST "/pets" for ::1 at 2021-06-27 18:26:01 +0200
+Processing by PetsController#create as */*
+  Parameters: {"name"=>"bong", "breed"=>"bischon", "desc"=>"pretty", "owner_id"=>"26", "clinic_id"=>"52", "pet"=>{"name"=>"bong", "breed"=>"bischon", "desc"=>"pretty", "owner_id"=>"26", "clinic_id"=>"52"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pets_controller.rb:6:in `create'
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:6:in `create'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:6:in `create'
+  [1m[36mPet Create (1.1ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "desc", "owner_id", "clinic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "bong"], ["breed", "bischon"], ["desc", "pretty"], ["owner_id", 26], ["clinic_id", 52], ["created_at", "2021-06-27 16:26:01.250737"], ["updated_at", "2021-06-27 16:26:01.250737"]]
+  ↳ app/controllers/pets_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1774.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pets_controller.rb:6:in `create'
+Redirected to http://localhost:3000/pets/20
+Completed 302 Found in 1834ms (ActiveRecord: 1776.5ms | Allocations: 5920)
+
+
+Started GET "/pets/20" for ::1 at 2021-06-27 18:26:03 +0200
+Processing by PetsController#show as */*
+  Parameters: {"id"=>"20", "pet"=>{}}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:31:in `set_pet'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:12:in `show'
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:12:in `show'
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.9ms | Allocations: 2144)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:26:09 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 784)
+
+
+Started DELETE "/owners/26" for ::1 at 2021-06-27 18:26:10 +0200
+Processing by OwnersController#destroy as */*
+  Parameters: {"id"=>"26", "owner"=>{}}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mOwner Destroy (136.3ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 137.1ms | Allocations: 3265)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+app/controllers/owners_controller.rb:24:in `destroy'
+Started GET "/owners" for ::1 at 2021-06-27 18:26:16 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.3ms | Allocations: 783)
+
+
+Started DELETE "/owners/25" for ::1 at 2021-06-27 18:26:19 +0200
+Processing by OwnersController#destroy as */*
+  Parameters: {"id"=>"25", "owner"=>{}}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/owners_controller.rb:30:in `set_owner'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mOwner Destroy (1.2ms)[0m  [1m[31mDELETE FROM "owners" WHERE "owners"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (18.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/owners_controller.rb:24:in `destroy'
+Completed 204 No Content in 203ms (ActiveRecord: 19.7ms | Allocations: 3967)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:26:24 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 705)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:26:29 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (3.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 3.3ms | Allocations: 697)
+
+
+Started DELETE "/clinics/52" for ::1 at 2021-06-27 18:26:32 +0200
+Processing by ClinicsController#destroy as */*
+  Parameters: {"id"=>"52", "clinic"=>{}}
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/clinics_controller.rb:25:in `set_clinic'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mClinic Destroy (1.3ms)[0m  [1m[31mDELETE FROM "clinics" WHERE "clinics"."id" = ?[0m  [["id", 52]]
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/clinics_controller.rb:19:in `destroy'
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 2.1ms | Allocations: 3264)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):
+  
+app/controllers/clinics_controller.rb:19:in `destroy'
+Started GET "/clinics" for ::1 at 2021-06-27 18:26:38 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 696)
+
+
+Started GET "/pets" for ::1 at 2021-06-27 18:26:40 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.9ms | Allocations: 2276)
+
+
+Started GET "/clinics" for ::1 at 2021-06-27 18:26:40 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.6ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 697)
+
+
+Started GET "/owners" for ::1 at 2021-06-27 18:26:41 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 705)
+
+
+Started GET "/pets" for ::1 at 2021-06-30 00:29:29 +0200
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.5ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (5.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 258ms (Views: 187.5ms | ActiveRecord: 13.3ms | Allocations: 18421)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-06-30 00:29:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/owners" for ::1 at 2021-06-30 00:30:02 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 1067)
+
+
+Started GET "/pets" for ::1 at 2021-06-30 00:30:04 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (2.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 3.0ms | Allocations: 2380)
+
+
+Started GET "/clinics" for ::1 at 2021-06-30 00:30:04 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.5ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 347ms (Views: 8.8ms | ActiveRecord: 0.5ms | Allocations: 913)
+
+
+Started GET "/owners" for ::1 at 2021-06-30 00:30:06 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 705)
+
+
+Started GET "/clinics" for ::1 at 2021-06-30 00:30:07 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (2.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 2.3ms | Allocations: 697)
+
+
+Started GET "/pets" for ::1 at 2021-06-30 09:23:59 +0200
+Processing by PetsController#index as HTML
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.5ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 277ms (Views: 173.2ms | ActiveRecord: 5.3ms | Allocations: 2903)
+
+
+Started GET "/owners" for ::1 at 2021-06-30 19:30:12 +0200
+Started GET "/clinics" for ::1 at 2021-06-30 19:30:12 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/pets" for ::1 at 2021-06-30 19:30:12 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as */*
+Processing by ClinicsController#index as */*
+Processing by PetsController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 57ms (Views: 49.5ms | ActiveRecord: 2.6ms | Allocations: 9498)
+
+
+Completed 200 OK in 65ms (Views: 40.3ms | ActiveRecord: 3.5ms | Allocations: 11119)
+
+
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.5ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (10.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 113ms (Views: 90.7ms | ActiveRecord: 12.8ms | Allocations: 16741)
+
+
+Started GET "/owners" for ::1 at 2021-06-30 19:30:12 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Started GET "/clinics" for ::1 at 2021-06-30 19:30:12 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (3.7ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 3.7ms | Allocations: 713)
+
+
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.4ms | Allocations: 2004)
+
+
+Started GET "/pets" for ::1 at 2021-06-30 19:30:12 +0200
+Processing by PetsController#index as */*
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Started GET "/clinics" for ::1 at 2021-06-30 19:30:12 +0200
+Started GET "/owners" for ::1 at 2021-06-30 19:30:12 +0200
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.8ms | Allocations: 2894)
+
+
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Processing by ClinicsController#index as */*
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 884)
+
+
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 927)
+
+
+Started GET "/owners" for ::1 at 2021-06-30 19:30:12 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 705)
+
+
+Started GET "/clinics" for ::1 at 2021-06-30 19:30:15 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.3ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started GET "/owners" for ::1 at 2021-06-30 19:30:17 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 714)
+
+
+Started GET "/clinics" for ::1 at 2021-06-30 19:30:17 +0200
+Processing by ClinicsController#index as */*
+  [1m[36mClinic Load (0.2ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics"[0m
+  ↳ app/controllers/clinics_controller.rb:10:in `index'
+Started GET "/pets" for ::1 at 2021-06-30 19:30:17 +0200
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 928)
+
+
+Processing by PetsController#index as */*
+  [1m[36mPet Load (2.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mClinic Load (0.4ms)[0m  [1m[34mSELECT "clinics".* FROM "clinics" WHERE "clinics"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:17:in `index'
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 3.0ms | Allocations: 2349)
+
+
+Started GET "/owners" for ::1 at 2021-06-30 19:30:21 +0200
+Processing by OwnersController#index as */*
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/controllers/owners_controller.rb:16:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms | Allocations: 706)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
