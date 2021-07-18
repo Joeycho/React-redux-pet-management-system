@@ -7,7 +7,7 @@ There are three models, Owner, Pet and Clinic. They have relationship each other
 
 For example, pet belongs to Owner and Clinic. Owner could have many clinics through Pet. Likewise from Clinic.
 
-![Petapi_model](https://user-images.githubusercontent.com/29337166/124007223-76da1100-d9db-11eb-9012-1918f621e4dc.JPG)
+![Petapi_model](https://user-images.githubusercontent.com/29337166/124007223-76da1100-d9db-11eb-9012-1918f621e4dc.JPG){ width=50% }
 
 ## Instruction
 
